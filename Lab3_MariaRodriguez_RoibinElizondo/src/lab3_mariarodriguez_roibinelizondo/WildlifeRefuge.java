@@ -11,14 +11,55 @@ totalmente de ayuda no gubernamental por empresas privadas.
 
 /**
  *
- * @author Usuario
+ * @author Maria Rodriguez
+ * @author Roibin Elizondo
  */
 public class WildlifeRefuge extends ProtectedAreas implements Methods{
     private double fueltaxes;
     private String kind; 
     private double companyhelp;
 
+    public WildlifeRefuge() {
+        this (0,"",0,"","");
+    }
 
+    public WildlifeRefuge(double fueltaxes, String kind, double companyhelp, String name, String province) {
+        super(name, province);
+        this.fueltaxes = fueltaxes;
+        this.kind = kind;
+        this.companyhelp = companyhelp;
+    }
+
+    public double getFueltaxes() {
+        return fueltaxes;
+    }
+
+    public void setFueltaxes(double fueltaxes) {
+        this.fueltaxes = fueltaxes;
+    }
+
+    public String getKind() {
+        return kind;
+    }
+
+    public void setKind(String kind) {
+        this.kind = kind;
+    }
+
+    public double getCompanyhelp() {
+        return companyhelp;
+    }
+
+    public void setCompanyhelp(double companyhelp) {
+        this.companyhelp = companyhelp;
+    }
+
+    @Override
+    public String toString() {
+        return "WildlifeRefuge{ " +super.toString()+ '}';
+    }
+
+    
     @Override
     public double Income() {
         double total;

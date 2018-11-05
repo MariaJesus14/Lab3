@@ -11,7 +11,8 @@ la cantidad de personas que entraron al parque durante el año por un monto esti
 
 /**
  *
- * @author Usuario
+ * @author Maria Rodriguez
+ * @author Roibin Elizondo
  */
 public class NationalPark extends ProtectedAreas implements Methods{
     private final int SUBSIDY = 1200;

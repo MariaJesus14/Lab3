@@ -8,10 +8,11 @@ package lab3_mariarodriguez_roibinelizondo;
 
 /**
  *
- * @author Usuario
+ * @author Maria Rodriguez
+ * @author Roibin Elizondo
  */
 public interface Methods {
-    public abstract double Income ();
+    public abstract  double Income ();
     public abstract double AmountEntrance ();
     public abstract double AmountSubsidy ();
     public abstract double Help ();

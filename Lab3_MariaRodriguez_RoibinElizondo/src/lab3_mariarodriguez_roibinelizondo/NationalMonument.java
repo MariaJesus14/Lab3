@@ -10,7 +10,8 @@ corresponde al 0.002 por ciento del PIB(Producto Interno Bruto) del país.
 
 /**
  *
- * @author Usuario
+ * @author Maria Rodriguez
+ * @author Roibin Elizondo
  */
 public class NationalMonument extends ProtectedAreas implements Methods{
     private final int NATIONAL = 5000;

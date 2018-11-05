@@ -8,7 +8,8 @@ package lab3_mariarodriguez_roibinelizondo;
 
 /**
  *
- * @author Usuario
+ * @author Maria Rodriguez
+ * @author Roibin Elizondo
  */
 public abstract class ProtectedAreas {
     private String name;
