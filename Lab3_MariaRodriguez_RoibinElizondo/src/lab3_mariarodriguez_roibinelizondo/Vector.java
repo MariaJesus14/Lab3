@@ -55,7 +55,7 @@ public class Vector {
     }
     //Reporte1: Debe mostrar para cada zona protegida su nombre, provincia y monto de ingresos.
     //Además, del monto total de ingresos de todas las zonas protegidas.
-    public String Report1 (){
+    public String Report1 (ProtectedAreas[] vector){
         String txt="";
         for (ProtectedAreas x : vector) {
             txt=np.toString()+" Monto Ingresos: "+np.Income() + "\n" + nm.toString()+" Monto Ingresos: "+ nm.Income()+
@@ -68,11 +68,11 @@ public class Vector {
     }
     // Reporte2: Debe mostrar el monto total obtenido por subvención, monto total por entradas a los
     //parques y monto total por ayuda no gubernamental.
-    public String Report2 (){
+    public String Report2 (ProtectedAreas[] vector){
         String txt ="";
         for (ProtectedAreas x : vector) {
-            txt= np.AmountEntrance()+np.AmountSubsidy()+np.Help()+"\n" +nm.AmountEntrance()+nm.AmountSubsidy()+nm.Help()+"\n" +
-                    wr.AmountEntrance()+wr.AmountSubsidy()+wr.Help()+"\n" +br.AmountEntrance()+br.AmountSubsidy()+br.Help();
+            txt=np.getName()+ " Cantidad por entradas: "+np.AmountEntrance()+" Cantidad por subsidio: "+np.AmountSubsidy()+" Cantidad por ayudas: "+np.Help()+"\n" +" Cantidad por entradas: "+nm.getName()+nm.AmountEntrance()+" Cantidad por subsidio: "+nm.AmountSubsidy()+" Cantidad por ayudas: "+nm.Help()+"\n" +
+                  wr.getName()+ " Cantidad por entradas: "+ wr.AmountEntrance()+" Cantidad por subsidio: "+wr.AmountSubsidy()+" Cantidad por ayudas: "+wr.Help()+"\n" +br.getName()+" Cantidad por entradas: "+br.AmountEntrance()+" Cantidad por subsidio: "+br.AmountSubsidy()+" Cantidad por ayudas: "+br.Help();
         }
         return txt;
     }
