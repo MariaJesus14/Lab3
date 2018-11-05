@@ -42,7 +42,7 @@ public abstract class ProtectedAreas {
 
     @Override
     public String toString() {
-        return "Protected Areas{ " + "Name= " + name + ", Province= " + province + '}';
+        return "Nombre= " + name + ", Provincia= " + province;
     }
     
     

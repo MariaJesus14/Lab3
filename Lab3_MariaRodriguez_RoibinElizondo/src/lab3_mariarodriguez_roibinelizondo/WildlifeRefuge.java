@@ -56,7 +56,7 @@ public class WildlifeRefuge extends ProtectedAreas implements Methods{
 
     @Override
     public String toString() {
-        return "WildlifeRefuge{ " +super.toString()+ '}';
+        return "Refugio de Vida Silvestre{ " +super.toString()+ '}';
     }
 
     

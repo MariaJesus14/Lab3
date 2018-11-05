@@ -31,7 +31,7 @@ public class BiologicalReserve extends ProtectedAreas implements Methods{
 
     @Override
     public String toString() {
-        return "BiologicalReserve{ " + super.toString()+ '}';
+        return "Reserva Biologica{ " + super.toString()+ '}';
     }
     
 

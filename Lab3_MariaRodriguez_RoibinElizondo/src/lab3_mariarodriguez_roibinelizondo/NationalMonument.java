@@ -66,7 +66,7 @@ public class NationalMonument extends ProtectedAreas implements Methods{
 
     @Override
     public String toString() {
-        return "National Monument{ " + super.toString()+ '}';
+        return "Monumento Nacional{ " + super.toString()+ '}';
     }
     
 

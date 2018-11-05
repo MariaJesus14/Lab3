@@ -49,7 +49,7 @@ public class NationalPark extends ProtectedAreas implements Methods{
 
     @Override
     public String toString() {
-        return  " NationalPark{ " +super.toString()+ '}';
+        return  "Parque Nacional{ " +super.toString()+ '}';
     }
     
     @Override

@@ -16,9 +16,11 @@ específicos solo cuando es requerido.
  * @author Roibin Elizondo
  */
 public class Vector {
+    
     ProtectedAreas [] vector;
     private final int SIZE=4;
     int count;
+    
     NationalPark np = new NationalPark();
     NationalMonument nm = new NationalMonument();
     BiologicalReserve br = new BiologicalReserve();
