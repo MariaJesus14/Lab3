@@ -52,11 +52,7 @@ public class NationalPark extends ProtectedAreas implements Methods{
         return  "Parque Nacional{ " +super.toString()+ '}';
     }
     
-    @Override
-    public double Income() {
-    double total = AmountSubsidy()+AmountEntrance();
-    return total;
-    }
+    
 
     @Override
     public double AmountEntrance() {
@@ -75,6 +71,12 @@ public class NationalPark extends ProtectedAreas implements Methods{
     public double AmountSubsidy() {
         double total= SUBSIDY*peoplebyYear;
         return total;
+    }
+    @Override
+    public double Income() {
+    double total = AmountSubsidy()+AmountEntrance();
+    return total;
+    
     }
 
     @Override

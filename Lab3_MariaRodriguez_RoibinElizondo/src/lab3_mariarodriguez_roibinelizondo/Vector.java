@@ -57,12 +57,36 @@ public class Vector {
     //Además, del monto total de ingresos de todas las zonas protegidas.
     public String Report1 (ProtectedAreas[] vector){
         String txt="";
+        int total =0;
         for (ProtectedAreas x : vector) {
-            txt=np.toString()+" Monto Ingresos: "+np.Income() + "\n" + nm.toString()+" Monto Ingresos: "+ nm.Income()+
-            "\n"+wr.toString()+" Monto Ingresos: "+wr.Income()+"\n"+br.toString()+" Monto Ingresos: "+br.Income()+ "\n"+"Monto total "
-                    + "de ingresos de todas las zonas protegidas: " + TotalAmountAll();
+            
+            if (x instanceof NationalPark) {
+                NationalPark parque = (NationalPark) x;
+                
+            txt += parque.toString() + " Monto Ingresos: " + parque.Income() + "\n";
+            total +=  parque.Income();
+            }
+            
+            if (x instanceof NationalMonument) {
+                NationalMonument monumento = (NationalMonument) x;
+            txt += monumento.toString() +" Monto Ingresos: " + monumento.Income()+ "\n";
+            total +=  monumento.Income();
+            }
+            
+            if (x instanceof BiologicalReserve) {
+                BiologicalReserve reserva = (BiologicalReserve) x;
+            txt +=  reserva.toString() + " Monto Ingresos: " + reserva.Income()+ "\n";
+            total +=  reserva.Income();
+            }
+            
+            if (x instanceof WildlifeRefuge) {
+                WildlifeRefuge refugio = (WildlifeRefuge) x;
+            txt += refugio.toString() + " Monto Ingresos: " + refugio.Income()+ "\n";
+            total +=  refugio.Income();
+            }
             
         }
+        txt += " Monto total de ingresos de todas las zonas protegidas: " + total+ "\n";
         return txt;
         
     }
@@ -70,10 +94,42 @@ public class Vector {
     //parques y monto total por ayuda no gubernamental.
     public String Report2 (ProtectedAreas[] vector){
         String txt ="";
+        int totalEntradas = 0;
+        int totalSubsidio = 0;
+        int totalAyudas = 0;
         for (ProtectedAreas x : vector) {
-            txt=np.getName()+ " Cantidad por entradas: "+np.AmountEntrance()+" Cantidad por subsidio: "+np.AmountSubsidy()+" Cantidad por ayudas: "+np.Help()+"\n" +" Cantidad por entradas: "+nm.getName()+nm.AmountEntrance()+" Cantidad por subsidio: "+nm.AmountSubsidy()+" Cantidad por ayudas: "+nm.Help()+"\n" +
-                  wr.getName()+ " Cantidad por entradas: "+ wr.AmountEntrance()+" Cantidad por subsidio: "+wr.AmountSubsidy()+" Cantidad por ayudas: "+wr.Help()+"\n" +br.getName()+" Cantidad por entradas: "+br.AmountEntrance()+" Cantidad por subsidio: "+br.AmountSubsidy()+" Cantidad por ayudas: "+br.Help();
+            if (x instanceof NationalPark) {
+                NationalPark parque = (NationalPark) x;
+            totalEntradas +=  parque.AmountEntrance();
+            totalSubsidio += parque.AmountSubsidy();
+            totalAyudas += parque.Help();   
+            }
+            
+            if (x instanceof NationalMonument) {
+                NationalMonument monumento = (NationalMonument) x;
+            totalEntradas +=  monumento.AmountEntrance();
+            totalSubsidio += monumento.AmountSubsidy();
+            totalAyudas += monumento.Help();
+            }
+            
+            if (x instanceof BiologicalReserve) {
+                BiologicalReserve reserva = (BiologicalReserve) x;
+            totalEntradas +=  reserva.AmountEntrance();
+            totalSubsidio += reserva.AmountSubsidy();
+            totalAyudas += reserva.Help();
+            }
+            
+            if (x instanceof WildlifeRefuge) {
+                WildlifeRefuge refugio = (WildlifeRefuge) x;
+            totalEntradas +=  refugio.AmountEntrance();
+            totalSubsidio += refugio.AmountSubsidy();
+            totalAyudas += refugio.Help();
+            }
+            
+//            txt=np.getName()+ " Cantidad por entradas: "+np.AmountEntrance()+" Cantidad por subsidio: "+np.AmountSubsidy()+" Cantidad por ayudas: "+np.Help()+"\n" +" Cantidad por entradas: "+nm.getName()+nm.AmountEntrance()+" Cantidad por subsidio: "+nm.AmountSubsidy()+" Cantidad por ayudas: "+nm.Help()+"\n" +
+//                  wr.getName()+ " Cantidad por entradas: "+ wr.AmountEntrance()+" Cantidad por subsidio: "+wr.AmountSubsidy()+" Cantidad por ayudas: "+wr.Help()+"\n" +br.getName()+" Cantidad por entradas: "+br.AmountEntrance()+" Cantidad por subsidio: "+br.AmountSubsidy()+" Cantidad por ayudas: "+br.Help();
         }
+         txt += " Monto total de ingresos de todas las zonas protegidas: "+ "\n" + "Total por entradas: "+ totalEntradas + "\n" + "Total por subsidio: " + totalSubsidio+ "\n" + "Total por ayudas: " + totalAyudas;
         return txt;
     }
 
