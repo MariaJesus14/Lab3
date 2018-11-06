@@ -78,7 +78,7 @@ public class WildlifeRefuge extends ProtectedAreas implements Methods{
 
     @Override
     public double AmountSubsidy() {
-        double total=fueltaxes-(0.005*100);
+        double total=fueltaxes-(0.005 * 100);
         return total;
     }
 
